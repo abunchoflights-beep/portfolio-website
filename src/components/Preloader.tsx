@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { gsap, useIsoLayoutEffect } from "@/lib/gsap";
 
-const WORD = "david cicery";
+const WORD = "David Cicery";
 
 export default function Preloader() {
   const rootRef = useRef<HTMLDivElement>(null);

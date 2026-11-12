@@ -8,7 +8,7 @@ import Magnetic from "./Magnetic";
 const EMAIL = "davidecicerys@gmail.com";
 
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/exyzte", icon: Github },
+  { label: "GitHub", href: "https://github.com/abunchoflights-beep/portfolio-website", icon: Github },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/david-cicery-471355229/", icon: Linkedin },
   { label: "Email", href: `mailto:${EMAIL}`, icon: Mail },
 ];
@@ -141,14 +141,14 @@ export default function Contact() {
               </a>
             ))}
           </div>
-          <p>Designed &amp; engineered by David · Next.js · GSAP</p>
+          <p>Designed &amp; engineered by David Cicery · Next.js · GSAP</p>
         </div>
         <div className="overflow-hidden">
           <div
             aria-hidden
             className="ct-giant select-none whitespace-nowrap text-center text-[19vw] font-semibold leading-[0.8] tracking-[-0.07em] text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.12)] md:text-[17vw]"
           >
-            david cicery
+            David Cicery
           </div>
         </div>
       </footer>

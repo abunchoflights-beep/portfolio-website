@@ -123,7 +123,7 @@ export default function Nav() {
           className={`pointer-events-auto flex items-center gap-1 rounded-full border p-1.5 backdrop-blur-2xl backdrop-saturate-150 transition-[background-color,border-color,color,box-shadow] duration-500 ${tone}`}
         >
           <a href="#top" onClick={(e) => go(e, "#top")} className="px-4 py-2 text-[15px] font-semibold tracking-[-0.03em]">
-            david<span className="text-[#7C3AED]">.</span>
+            David Cicery<span className="text-[#7C3AED]">.</span>
           </a>
 
           <div className="relative hidden items-center sm:flex">
