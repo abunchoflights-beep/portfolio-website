@@ -1,6 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+import Preloader from "@/components/Preloader";
+import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,17 +16,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "David Cicery | Full Stack AI Developer",
-  description: "Transitioning from Modern Languages to AI-driven Full Stack development. Showcasing technical mastery through modern web experiences.",
-  keywords: ["Next.js", "React", "AI Integration", "Full Stack", "Modern Languages", "Developer Portfolio"],
-  authors: [{ name: "David" }],
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#000000",
 };
 
-import GsapInitializer from "@/components/GsapInitializer";
-import SmoothScroll from "@/components/SmoothScroll";
-import CustomCursor from "@/components/CustomCursor";
+export const metadata: Metadata = {
+  title: "David Cicery — Full-Stack & AI Engineer",
+  description:
+    "Full-stack & AI engineer and founder of xBeliv. Building production systems, autonomous agents and interfaces people love to use.",
+  keywords: ["Next.js", "React", "AI Agents", "Full Stack", "xBeliv", "Developer Portfolio", "David Cicery"],
+  authors: [{ name: "David Cicery" }],
+};
 
 export default function RootLayout({
   children,
@@ -30,20 +36,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark bg-[#050505]">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#050505] text-neutral-200 selection:bg-yellow-400 selection:text-black`}
-      >
-        <GsapInitializer />
+    <html lang="en" className="bg-black">
+      <body className={`${geistSans.variable} ${geistMono.variable} bg-black text-[#f5f5f7] antialiased`}>
+        <Preloader />
         <CustomCursor />
-        <div className="noise-overlay" />
+        <div className="noise-overlay" aria-hidden />
         <SmoothScroll>
-          <main className="relative z-10 min-h-screen">
-            {children}
-          </main>
+          <main className="relative z-10 min-h-screen">{children}</main>
         </SmoothScroll>
       </body>
     </html>
